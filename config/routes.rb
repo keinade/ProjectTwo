@@ -1,6 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
 
+  map.contact '/contact', :controller => 'pages', :action => 'contact'
+  map.about '/about', :controller => 'pages', :action => 'about'
+  
+  map.root , :controller => 'pages', :action => 'home'
+  
+  map.resources :posts
   map.resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
